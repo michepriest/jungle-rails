@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find params[:id]
+    @product = Product.find params[:id]  #Product.find from the db, this is the route
   end
 
 end
