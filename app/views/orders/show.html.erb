@@ -5,9 +5,27 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Qty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "line_item", object: @order %>
+      </tbody>
+    </table>
+    <div>
+      Email: <%= @user.email %>
+    </div>
+    <div> Total Item Count: <%= (@order.line_items.sum(:quantity))%> </div>
+    <div> Total Price: $<%= (@order.line_items.sum(:total_price_cents))/100.0%>  </div>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
+		
