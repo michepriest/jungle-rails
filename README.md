@@ -28,4 +28,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Stripe
 
 ## Final Product
-![Items list with one SOLD OUT item] ()
+![Items list with one SOLD OUT item] (https://github.com/michepriest/jungle-rails/blob/master/docs/jungle-screenshot.png)
